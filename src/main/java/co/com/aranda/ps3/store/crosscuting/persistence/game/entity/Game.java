@@ -48,4 +48,6 @@ public class Game {
 
     @Column(name = "TRAILER_LINK")
     private String trailerLink;
+    @Column(name = "IMAGE_URL")
+    private String urlImage;
 }

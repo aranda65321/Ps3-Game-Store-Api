@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Builder
 public class GameDto {
-
+    private long id;
     private String name;
     private String language;
     private String size;
@@ -21,4 +21,5 @@ public class GameDto {
     private String filePassword;
     private String description;
     private String trailerLink;
+    private String urlImage;
 }

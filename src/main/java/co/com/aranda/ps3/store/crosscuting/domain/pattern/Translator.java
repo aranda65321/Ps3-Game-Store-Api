@@ -7,7 +7,8 @@ package co.com.aranda.ps3.store.crosscuting.domain.pattern;
  * @param <O> the generic type
  */
 public interface Translator<I, O> {
-    O translate(final I input);
+    I translateToEntity(final O input);
+    O translateToDto(final I input);
 
 
 }
