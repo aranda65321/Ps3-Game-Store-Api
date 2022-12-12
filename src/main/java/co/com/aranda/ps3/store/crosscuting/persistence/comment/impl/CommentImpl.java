@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
+import java.util.Optional;
 
 @Component
 public class CommentImpl {
@@ -16,12 +17,16 @@ public class CommentImpl {
         return this.commentRepository.findAll();
     }
 
-    public Comment createNewComment(Comment comment) {
+    public Optional<Comment> getCommentById(long id){
+        return this.commentRepository.findById(id);
+    }
+
+    public Comment saveComment(Comment comment) {
         return this.commentRepository.save(comment);
     }
 
     public Comment updateComment(Comment comment) {
-        return this.createNewComment(comment);
+        return this.saveComment(comment);
     }
 
     public boolean deleteComment(Long id){

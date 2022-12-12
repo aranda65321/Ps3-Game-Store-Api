@@ -26,8 +26,9 @@ public class GameImpl {
     }
 
     public GameDto getGameById(Long id) {
-        return this.translateGame
-                .translateToDto(this.gameRepository.findById(id).orElse(null));
+        Game game = this.gameRepository.findById(id).orElse(null);
+        return game != null ? this.translateGame
+                .translateToDto(game) : null;
     }
 
     public void deleteGame(long gameId) {

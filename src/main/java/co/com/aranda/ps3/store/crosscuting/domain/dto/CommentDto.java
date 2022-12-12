@@ -12,6 +12,7 @@ import java.util.Date;
 @NoArgsConstructor
 @Builder
 public class CommentDto {
+    private long id;
     private String comment;
     private Date creationDate;
 }

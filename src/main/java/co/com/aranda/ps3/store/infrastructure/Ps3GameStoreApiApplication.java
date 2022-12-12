@@ -9,10 +9,14 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 		"co.com.aranda.ps3.store"
 })
 @EnableJpaRepositories(basePackages = {
-		"co.com.aranda.ps3.store.crosscuting.persistence.game.repository"
+		"co.com.aranda.ps3.store.crosscuting.persistence.game.repository",
+		"co.com.aranda.ps3.store.crosscuting.persistence.comment.repository",
+		"co.com.aranda.ps3.store.crosscuting.persistence.requestgame.repository"
 })
 @EntityScan(basePackages = {
-		"co.com.aranda.ps3.store.crosscuting.persistence.game.entity"
+		"co.com.aranda.ps3.store.crosscuting.persistence.game.entity",
+		"co.com.aranda.ps3.store.crosscuting.persistence.comment.entity",
+		"co.com.aranda.ps3.store.crosscuting.persistence.requestgame.entity"
 })
 public class Ps3GameStoreApiApplication {
 

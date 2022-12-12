@@ -5,6 +5,7 @@ import co.com.aranda.ps3.store.crosscuting.persistence.requestgame.repository.Re
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
 import java.util.Optional;
 
 @Component
@@ -12,16 +13,21 @@ public class RequestGameImpl {
     @Autowired
     private RequestGameRepository gameRepository;
 
-    public RequestGame saveRequestGame(RequestGame requestGame){
+    public RequestGame saveRequestGame(RequestGame requestGame) {
         return this.gameRepository.save(requestGame);
     }
 
-    public RequestGame updateRequestGame(RequestGame requestGame){
+    public RequestGame updateRequestGame(RequestGame requestGame) {
         return this.saveRequestGame(requestGame);
     }
 
-    public Optional<RequestGame> getRequestGameById(Long id){
+    public Optional<RequestGame> getRequestGameById(Long id) {
         return this.gameRepository.findById(id);
     }
+
+    public List<RequestGame> getListRequestGame() {
+        return this.gameRepository.findAll();
+    }
+
 
 }

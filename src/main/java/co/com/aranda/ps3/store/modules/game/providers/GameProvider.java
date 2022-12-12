@@ -7,6 +7,7 @@ import co.com.aranda.ps3.store.crosscuting.persistence.game.impl.GameImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
 import java.util.Optional;
 
 @Component
@@ -16,8 +17,11 @@ public class GameProvider {
     @Autowired
     private TranslateGame translateGame;
 
+    public List<Game> getListGames(){
+        return this.gameImpl.getListGames();
+    }
     public Optional<GameDto> getGameById(Long id) {
-        return Optional.of(this.gameImpl.getGameById(id));
+        return Optional.ofNullable(this.gameImpl.getGameById(id));
     }
 
     public Optional<GameDto> saveGame(GameDto gameDto) {
