@@ -43,7 +43,7 @@ public class Game {
     @Column(name = "FILE_PASSWORD")
     private String filePassword;
 
-    @Column(name = "DESCRIPTION")
+    @Column(name = "DESCRIPTION", length = 10000)
     private String description;
 
     @Column(name = "TRAILER_LINK")

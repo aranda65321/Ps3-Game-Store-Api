@@ -39,7 +39,7 @@ public class GameProvider {
     }
 
     public boolean validGameRequest(final GameDto gameDto) {
-        if (gameDto == null || gameDto.getId() == 0 || gameDto.getName() == null || gameDto.getDescription() == null
+        if (gameDto == null || gameDto.getName() == null || gameDto.getDescription() == null
                 || gameDto.getFilePassword() == null || gameDto.getLanguage() == null
                 || gameDto.getNumberId() == null || gameDto.getRegion() == null || gameDto.getServers() == null
                 || gameDto.getSize() == null || gameDto.getTrailerLink() == null || gameDto.getType() == null

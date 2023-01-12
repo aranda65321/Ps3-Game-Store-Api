@@ -22,6 +22,7 @@ public class TranslateGame implements Translator<Game, GameDto> {
                 .filePassword(input.getFilePassword())
                 .description(input.getDescription())
                 .trailerLink(input.getTrailerLink())
+                .urlImage(input.getUrlImage())
                 .build();
     }
 
@@ -39,6 +40,7 @@ public class TranslateGame implements Translator<Game, GameDto> {
                 .filePassword(input.getFilePassword())
                 .description(input.getDescription())
                 .trailerLink(input.getTrailerLink())
+                .urlImage(input.getUrlImage())
                 .build();
     }
 }

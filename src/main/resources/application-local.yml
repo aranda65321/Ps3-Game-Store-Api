@@ -4,7 +4,7 @@ server:
     contextPath: /game-store/app/api/v1
 spring:
   datasource:
-    url: jdbc:h2:tcp://localhost/C:\Cursos\Proyectos\Back\Ps3\db\game_store
+    url: jdbc:h2:file:C:\Cursos\Proyectos\Back\Ps3\db\game_store
     driver-class-name: org.h2.Driver
     username: sa
     password:
