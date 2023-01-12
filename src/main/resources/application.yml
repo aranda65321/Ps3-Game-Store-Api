@@ -1,5 +1,5 @@
 server:
-  port: 8000
+  port: 80
   servlet:
     contextPath: /game-store/app/api/v1
 spring:
